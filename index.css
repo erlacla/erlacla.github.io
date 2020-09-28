@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    background-color: rgb(232, 233, 161);
+    
+}
+header {
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+}
+h1 {
+    margin: 0;
+    align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 1em;
+  padding-top: 7px;
+  padding-left: 4px;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+P {
+    background-color: rgb(164, 183, 218);
+    border-radius: 10px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-left: 20em;
+  margin-right: 20em;
+}
