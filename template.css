@@ -19,7 +19,9 @@ h2 {
 }
 
 h2, #currentdate {
-	color: yellow;
+	color: rgb(255, 145, 0);
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: .2em;
 }
 
 main {
@@ -42,4 +44,6 @@ label {
 	display: block;
 	margin: 5px;
 }
-
+input, button {
+	padding: .4rem;
+}
