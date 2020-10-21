@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Total pay after Tax</h1>
+    <lable>Enter regular hours: <input type="text" id="regularHours"></lable>
+    <lable>Enter overtime hours: <input type="text" id="overHours"></lable>
+    <label><button onclick="calculatePay()">Calculate</button></label>
+    <hr>
+        <p><span id="total"></span></p>
+    <script>
+        function calculatePay() {
+            //INPUT get user input of hours worked.
+            let rh = parseFloat(document.getElementById("regularHours").value);
+            let oh = parseFloat(document.getElementById("overHours").value);
+            let tax = 0.15;
+
+            //PROCESSING multiply hours by pay and add together. Multiply total earned by 15%. Subtarct the tax from the total earned.
+            let totalEarned = rh * 15 + oh * 22.5;
+            let totalTax = totalEarned * tax;
+            let finalPay = totalEarned - totalTax;
+
+            //OUTPUT dispay pay after tax for user.
+        } document.getElementById("total").textContent = "$" + finalPay.toFixed(2);
+    </script>
+</body>
+
+</html>

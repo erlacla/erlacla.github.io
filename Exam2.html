@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find volume</title>
+    
+</head>
+
+<body>
+    
+    <main>
+        <h3>Volume of Cylinder</h3>
+        <label>Enter hight of cylinder: <input type="text" id="hight"></label>
+        <label>Enter radius of cylinder: <input type="text" id="radius"></label>
+        <label><button onclick="findVolume()">Add Numbers</button></label>
+        <hr>
+        <p><span id="outputV"></span></p>
+    </main>
+    <script>
+        function findVolume() {
+    //INPUT from user text boxes.
+    let h = parseFloat(document.getElementById("hight").value);
+    let r = parseFloat(document.getElementById("radius").value);
+    //PROCESSING multiply user input by formula.
+    let volume = Math.PI * h * r * r;
+    //OUTPUT display answer in the paragraph span to the user
+    document.getElementById("outputV").textContent = volume.toFixed(2) + " ";
+    </script>
+</body>
+
+</html>
