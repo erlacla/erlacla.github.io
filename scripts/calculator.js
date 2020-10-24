@@ -8,7 +8,7 @@ function calculate() {
     let number2 = parseFloat(document.getElementById('number2').value);
     let userAnswer = parseFloat(document.getElementById('answer').value);
     let answer;
-    let message;
+    
     //PROCESSING use switch statement to set true math answers for each operend.
     //use if and else to set correct or incorrect message depending on == or !=.
     switch (operator) {
