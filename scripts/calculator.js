@@ -3,11 +3,12 @@ function calculate() {
 
     //INPUT collect input from three text boxes and operand combo box.
         //Set variable answer and message.
-    let number1 = parsFloat(document.getElementById('number1').value);
-    let operator = document.getElementById('operator').textContent;
+    let number1 = parseFloat(document.getElementById('number1').value);
+    let operator = document.getElementById('operator').value;
     let number2 = parseFloat(document.getElementById('number2').value);
     let userAnswer = parseFloat(document.getElementById('answer').value);
     let answer;
+    let message;
     
     //PROCESSING use switch statement to set true math answers for each operend.
     //use if and else to set correct or incorrect message depending on == or !=.
@@ -24,12 +25,12 @@ function calculate() {
         case '/':
             answer = number1 / number2;
     }
-    if (answer == userAnswer) {
-        answer = "Correct! 🏆";
+    if (userAnswer == answer) {
+        message = "Correct! 🏆"
     }
-    else (answer != userAnswer) { //i know i dont need this: (answer != userAnswer)
-        answer = "Incorrect 😢";
+    else {
+        message = "Incorrect 😢"
     }
 //OUTPUT use getElementById to display correct or incorrect to user.
-document.getElementById('output').innerHTML = answer;
+document.getElementById('output').innerHTML = message;
 }
