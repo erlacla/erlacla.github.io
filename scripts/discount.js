@@ -8,14 +8,15 @@ function calculateDiscount() {
     //then assign discount to this condition.
     //Determine tax rate for regular subtotal or discounted subtotal.
     //Add tax to subtotals.
-    if (userSubTotal >= 50 && dayOfWeek == 2 || dayOfWeek == 3) {
+    if (userSubTotal >= 50 && dayOfWeek == 2 || userSubTotal >= 50 && dayOfWeek == 3) {
         discountRate = 0.1;
     } else {
         discountRate = 0;
     }
     let discount = userSubTotal * discountRate;
-    let tax = userSubTotal * 0.06;
-    let output = (userSubTotal - discountRate) + tax;
+    let newTotal = userSubTotal - discount;
+    let tax = newTotal * 0.06;
+    let output = newTotal + tax;
     //OUTPUT the adjusted total to user by using the id embedded in the HTML.
     document.getElementById("output").innerHTML = output.toFixed(2);
 
