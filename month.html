@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days</title>
+    <link type="text/css" rel="stylesheet" href="css/template.css">
+</head>
+<body>
+    <header>
+        
+        <h2>Erin Engler</h2>
+    </header>
+    <main>
+        <h3>How many days?</h3>
+        <label>Enter Month: <input type="text" id="number1"></label>
+      
+        <label><button onclick="howMany()">Go</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Erin Engler &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+function howMany() {
+    let input = document.getElementById("number1").value;
+    if (input == "april" || input == "june" || input == "september" || input == "november") {
+        output = "30 days";
+    }
+    else if (input == "january" || input == "march" || input == "may" || input == "july" || input == "august" || input == "october" || input == "december") {
+        output = "31 days";
+    }
+    else if (input == "february") {
+        output = "28 or 29 days";
+    }
+    document.getElementById("output").innerHTML = output;
+}
+
+    </script>
+</body>
+</html>

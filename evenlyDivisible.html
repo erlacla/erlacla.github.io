@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Two Numbers</title>
+    <link type="text/css" rel="stylesheet" href="css/template.css">
+</head>
+
+<body>
+    <header>
+        <h1>Week 3: Add Two Numbers</h1>
+        <h2>Erin Engler</h2>
+    </header>
+    <main>
+        <h3>Add Two Numbers</h3>
+        <label>Start: <input type="text" id="start"></label>
+        <label>End: <input type="text" id="end"></label>
+        <label>Divisor: <input type="text" id="divisor"></label>
+        <label><button onclick="evenlyDivisible()">Go</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Erin Engler &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        function evenlyDivisible() {
+            let start = parseFloat(document.getElementById("start").value);
+            let end = parseFloat(document.getElementById("end").value);
+            let divisor = parseFloat(document.getElementById("divisor").value);
+            
+            let output = "";
+            for (let i = start; i <= end; i++) {
+                if (i % divisor == 0) {
+                    output += i + " "; 
+                }
+            document.getElementById("output").innerHTML = output;    
+            }
+        }
+
+    </script>
+</body>
+
+</html>

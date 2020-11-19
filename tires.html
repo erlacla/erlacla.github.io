@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Two Numbers</title>
+    <link type="text/css" rel="stylesheet" href="css/template.css">
+</head>
+<body>
+    <header>
+        =
+        <h2>Erin Engler</h2>
+    </header>
+    <main>
+        <h3>Tires</h3>
+        <label>Enter Number One: <input type="text" id="number1"></label>
+      
+        <label><button onclick="tires()">New tires?</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Erin Engler &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+   <script>
+function tires() {
+    let input = parseInt(document.getElementById("number1").value);
+    if (input < 0.16) {
+        output = "replace tires";
+    } else if (input >= 0.16) {
+        output = "enjoy";
+    }
+document.getElementById("output").innerHTML = output;
+}
+   </script> 
+</body>
+</html>

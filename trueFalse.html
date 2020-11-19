@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>True or False</title>
+</head>
+
+<body>
+    <p>Please enter two numbers:</p>
+    <input type="text" id="one" size="5"><br>
+    <input type="text" id="two" size="5">
+    <button type="button" onclick="trueFalse()">Click</button>
+    <div id="output"></div>
+
+    <script>
+        /* Input:
+         * Processing:if both of the numbers are greater than 5 or if their sum is greater than 20.
+         * Output:
+         */
+        function trueFalse() {
+            let number1 = parseInt(document.getElementById("one").value);
+            let number2 = parseInt(document.getElementById("two").value);
+            if (number1 > 5 && number2 > 5 || number1 + number2 > 20) {
+                output = "True"
+            }
+            else {
+                output = "False"
+            }
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+
+</html>

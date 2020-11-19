@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Two Numbers</title>
+    <link type="text/css" rel="stylesheet" href="css/template.css">
+</head>
+<body onLoad="count()">
+    <header>
+        <h1>Count backwards from 90 to 81</h1>
+        <h2>Erin Engler</h2>
+    </header>
+    <main>
+        
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Erin Engler &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+function count() {
+    for (let i = 90; i >= 81; i--)
+    document.getElementById("output").innerHTML = i;
+}
+
+    </script>
+</body>
+</html>
