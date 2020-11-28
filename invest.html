@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+</head>
+<body>
+    <main>
+        <h2>Investment Calculator</h2>
+        <label style="display: block;">Amount invested (principal)  <input type="text" id="principal"></label>
+        <label style="display: block; padding: 10px;">Annual rate (example: .08)  <input type="text" id="rate"></label>
+        <label style="display: block;">Number of years  <input type="text" id="years"></label>
+        <label style="display: block; padding: 10px;">Periods per years  <input type="text" id="periods"></label>
+        <label><button onclick="doFV()">Compute future value  </button></label>
+        <label><input type="textbox" id="output" readonly="readonly"></label>   
+    </main>
+    <script src="scripts/invest.js"></script>
+</body>
+</html>

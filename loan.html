@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+</head>
+
+<body>
+    <main>
+        <h2>Loan Calculator</h2>
+        <label style="display: block;">Amount borrowed (principal) <input type="text" id="principal"></label>
+        <label style="display: block; padding: 10px;">Annual interest rate (example: .065) <input type="text"
+                id="rate"></label>
+        <label style="display: block;">Number of years <input type="text" id="years"></label>
+        <label style="display: block; padding: 10px;">Payments per year <input type="text" id="paymentsPerYear"></label>
+        <label style="display: block;"><button onclick="doPayment()">Compute payment</button></label>
+        <div id="outputPayment" style="display: block;"></div>
+        <input type="hidden" id="paymentPiece">
+
+        <label style="display: block;">Number of payments paid to date <input type="text" id="paidToDate"></label>
+        <label><button onclick="doBalance()">Compute payoff amount </button></label>
+        <div id="outputPayoff"></div>
+    </main>
+    <script src="scripts/loan.js"></script>
+</body>
+
+</html>
