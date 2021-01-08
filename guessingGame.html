@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link type="text/css" rel="stylesheet" href="css/template.css">
+</head>
+<body>
+    <header>
+        <h1>Guess the Number!</h1>
+        <h2>Erin Engler</h2>
+    </header>
+    <main>
+        <h3>Guess the Number</h3>
+        
+     
+        <label><button onclick="numberGuessGame()">Play</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Erin Engler &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+
+function numberGuessGame() {
+   let numberOfGuesses = 0;
+    let message =
+        "I'm thinking of a number between 1 and 100.\n" +
+        "Try to guess it!\n" +
+        "Please enter an integer between 1 and 100.";
+    let answer = Math.floor(Math.random() * 100);
+    
+    let guess;
+    do {
+        guess = parseInt(prompt(message));
+        if (guess < answer) {
+            message = guess +
+            " is too low. Please enter another integer.";
+            numberOfGuesses += 1;
+        }
+        else if (guess > answer) {
+            message = guess +
+            " is too high. Please enter another integer.";
+            numberOfGuesses += 1;
+        }
+    } while (guess != answer);
+    message = guess + " is correct!";
+    alert(message);
+    alert(numberOfGuesses);
+}
+
+    </script>
+</body>
+</html>
